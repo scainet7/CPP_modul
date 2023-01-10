@@ -11,29 +11,35 @@
 # **************************************************************************** #
 
 
-NAME		:=		megaphone
+NAME			:=		megaphone
 
-CC			:=		clang++
+CC				:=		c++
 
-CFLAGS		:=		-Wall -Wextra -Werror -c -std=c++98 -pedantic
+CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
-RM			:=		rm -rf
+RM				:=		rm -rf
 
-SRCS		:=		megaphone.cpp
+SRCS			:=		megaphone.cpp
 
-OBJ 		:=		$(SRCS:%.cpp=%.o)
+OBJ_DIR			:=		obj
 
-.PHONY		:		all clean fclean re
+OBJ 			:=		$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
-all 		: 		$(NAME)
+.PHONY			:		all clean fclean re
 
-$(NAME)		: 		$(OBJ)
-					$(CC) $(OBJ) -o $(NAME)
+all 			: 		$(NAME)
 
-clean		:
-					$(RM) $(OBJ)
+$(NAME)			: 		$(OBJ)
+							$(CC) $(CFLAGS) $(OBJ)  -o $(NAME)
 
-fclean		:		clean
-					$(RM) $(NAME)
+$(OBJ_DIR)/%.o	:		%.cpp $(HEADER)
+							@mkdir -p $(OBJ_DIR)
+							$(CC) $(FLAGS) -c $< -o $@
 
-re			:		fclean $(NAME)
+clean			:
+						$(RM) $(OBJ_DIR)
+
+fclean			:		clean
+							$(RM) $(NAME)
+
+re				:		fclean all

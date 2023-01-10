@@ -10,14 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string.h>
+#include "main.hpp"
 
 int main ()
 {
-	int i, n, s;
-	std::string str;
-	while (std::cin >> str)
-		;
-	
+	std::string	com;
+	PhoneBook	PhoneBook;
+
+	while (true)
+	{
+		if (!std::getline(std::cin, com))
+			return (1);
+		else if (com == "EXIT")
+			return (0);
+		else if (com == "ADD")
+			PhoneBook.addContact();
+		else if (com == "SEARCH")
+		{
+
+		}
+		else
+			std::cout << "ERROR: Invalid command.\n" << "Please enter the command correctly.\n";
+	}
+	return (0);
 }

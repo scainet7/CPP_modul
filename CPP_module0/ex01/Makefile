@@ -11,29 +11,42 @@
 # **************************************************************************** #
 
 
-NAME		:=		phonebook
+NAME			:=		phonebook
 
-CC			:=		clang++
+CC				:=		c++
 
-CFLAGS		:=		-Wall -Wextra -Werror -c -std=c++98 -pedantic
+CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
-RM			:=		rm -rf
+RM				:=		rm -rf
 
-SRCS		:=		main.cpp
+HEADERS			:=   	main.hpp\
+						Contact.hpp\
+						PhoneBook.hpp
 
-OBJ 		:=		$(SRCS:%.cpp=%.o)
+SRCS			:=		main.cpp\
+						Contact.cpp\
+						PhoneBook.cpp
 
-.PHONY		:		all clean fclean re
+OBJ_DIR			:=		obj
 
-all 		: 		$(NAME)
+OBJ 			:=		$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
-$(NAME)		: 		$(OBJ)
-					$(CC) $(OBJ) -o $(NAME)
+.PHONY			:		all clean fclean re
 
-clean		:
-					$(RM) $(OBJ)
+all 			: 		$(NAME)
 
-fclean		:		clean
-					$(RM) $(NAME)
+$(NAME)			: 		$(HEADERS) $(OBJ)
+							$(CC) $(CFLAGS) $(OBJ)  -o $(NAME)
 
-re			:		fclean $(NAME)
+$(OBJ_DIR)/%.o	:		%.cpp $(HEADERS)
+							@mkdir -p $(OBJ_DIR)
+							$(CC) $(FLAGS) -c $< -o $@
+
+clean			:
+						$(RM) $(OBJ_DIR)
+
+fclean			:		clean
+							$(RM) $(NAME)
+
+re				:		fclean all
+

@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.h                                          :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 15:21:47 by snino             #+#    #+#             */
-/*   Updated: 2022/12/03 15:21:47 by snino            ###   ########.fr       */
+/*   Created: 2022/12/03 15:21:51 by snino             #+#    #+#             */
+/*   Updated: 2022/12/03 15:21:51 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-#define CONTACT_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#endif //CONTACT_H
+#include "Contact.hpp"
+
+class PhoneBook
+{
+	private:
+			Contact contact[8];
+			int		numb;
+	public:
+
+			PhoneBook();
+			void addContact();
+			~PhoneBook();
+};
+
+#endif
