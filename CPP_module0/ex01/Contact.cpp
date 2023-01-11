@@ -14,7 +14,6 @@
 
 Contact::Contact() //Конструктор по умолчанию
 {
-	Contact("", "", "", "", "");
 }
 
 Contact::Contact(std::string first_name, // Конструктор копирования
@@ -34,9 +33,18 @@ Contact::~Contact() // Деструктор
 {
 }
 
+void  Contact::print()
+{
+	std::cout << getFirstName() << std::endl;
+	std::cout << getLastName() << std::endl;
+	std::cout << getNick() << std::endl;
+	std::cout << getNumb() << std::endl;
+	std::cout << getSecret() << std::endl;
+}
+
 void Contact::setFirstName(std::string str)
 {
-	this->first_name = str;
+	this->first_name = str;	
 }
 
 void Contact::setLastName(std::string str)
@@ -82,23 +90,23 @@ void Contact::setInfo()
 {
 	std::string str;
 
-	std::cout << "Enter first Name:\n";
+	std::cout << BLU "Enter first Name:\n" END;
 	std::getline(std::cin, str);
 	this->setFirstName(str);
 
-	std::cout << "Enter last Name:\n";
+	std::cout << BLU "Enter last Name:\n" END;
 	std::getline(std::cin, str);
 	this->setLastName(str);
 
-	std::cout << "Enter nick Name:\n";
+	std::cout << BLU "Enter nick Name:\n" END;
 	std::getline(std::cin, str);
 	this->setNick(str);
 
-	std::cout << "Enter telephone number:\n";
+	std::cout << BLU "Enter telephone number:\n" END;
 	std::getline(std::cin, str);
-	this->setFirstName(str);
+	this->setNumb(str);
 
-	std::cout << "Enter darkest secret:\n";
+	std::cout << BLU "Enter darkest secret:\n" END;
 	std::getline(std::cin, str);
 	this->setSecret(str);
 }

@@ -46,6 +46,7 @@ class Contact
 			std::string	getNick() const;
 			std::string	getNumb() const;
 			std::string	getSecret() const;
+			void	print();
 			void	setFirstName(std::string str);
 			void	setLastName(std::string str);
 			void	setNick(std::string str);

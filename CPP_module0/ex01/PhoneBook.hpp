@@ -23,7 +23,10 @@ class PhoneBook
 	public:
 
 			PhoneBook();
-			void addContact();
+			void	addContact();
+			void	searchContact();
+			void	fullprintContacts();
+			void	printContact();
 			~PhoneBook();
 };
 

@@ -19,6 +19,8 @@ int main ()
 
 	while (true)
 	{
+		std::cout << GRE "Please enter comand\n" END;
+
 		if (!std::getline(std::cin, com))
 			return (1);
 		else if (com == "EXIT")
@@ -26,11 +28,9 @@ int main ()
 		else if (com == "ADD")
 			PhoneBook.addContact();
 		else if (com == "SEARCH")
-		{
-
-		}
+			PhoneBook.searchContact();
 		else
-			std::cout << "ERROR: Invalid command.\n" << "Please enter the command correctly.\n";
+			std::cout << RED "ERROR: Invalid command.\n\n" END;
 	}
 	return (0);
 }
