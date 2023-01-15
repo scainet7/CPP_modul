@@ -60,7 +60,7 @@ Result:
 </h1>
 
 
-#### ex02(https://github.com/scainet7/CPP_modul/tree/main/CPP_00/ex02)
+#### [ex02](https://github.com/scainet7/CPP_modul/tree/main/CPP_00/ex02)
 
 ### [CPP_01](CPP_01)
 ### [CPP_02](CPP_02)
