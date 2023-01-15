@@ -6,3 +6,4 @@
 !*/*/*.hpp
 !*/*.pdf
 !*/*/Makefile
+!*/*/*.gif
