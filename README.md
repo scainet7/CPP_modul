@@ -40,14 +40,27 @@ This is a series of C++ projects for learning object oriented programming. The p
 Write a program that behaves like this: :point_down:
 
 <h1>
-  <img src="https://github.com/scainet7/CPP_modul/blob/main/IMG/ex_01.png" width="800px"/>
+  <img src="https://github.com/scainet7/CPP_modul/blob/main/IMG/ex_01.png" width="700px"/>
+</h1>
+
+Result:
+
+<h1>
+  <img src="https://github.com/scainet7/CPP_modul/blob/main/IMG/GIF/ex_00_00.gif" width="700px"/>
 </h1>
 
 #### [ex01](https://github.com/scainet7/CPP_modul/tree/main/CPP_00/ex01) :point_left:
 
 It is necessary to implement a program that behaves like a phone book. It can store no more than 8 contacts. If you record more than 8 contacts, then it will overwrite the oldest contact with the new one. The program can accept 3 commands: ADD, SEARCH, EXIT.
 
-#### ex02()
+Result:
+
+<h1>
+  <img src="https://github.com/scainet7/CPP_modul/blob/main/IMG/GIF/ex_00_01.gif" width="700px"/>
+</h1>
+
+
+#### ex02(https://github.com/scainet7/CPP_modul/tree/main/CPP_00/ex02)
 
 ### [CPP_01](CPP_01)
 ### [CPP_02](CPP_02)
