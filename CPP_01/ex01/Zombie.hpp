@@ -1,5 +1,5 @@
 #ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 # define RED "\033[31m"
