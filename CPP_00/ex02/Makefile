@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		a.out
+NAME			:=		test
 
 CC				:=		c++
 
@@ -19,9 +19,11 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-#HEADERS			:= 
+HEADERS			:=   	Account.hpp
 
-SRCS			:=		main.cpp
+SRCS			:=		tests.cpp\
+						Account.cpp
+						
 
 OBJ_DIR			:=		obj
 

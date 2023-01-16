@@ -19,13 +19,14 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	main.hpp\
-						Contact.hpp\
-						PhoneBook.hpp
+HEADERS			:=   	Weapon.hpp\
+						HumanA.hpp\
+						HumanB.hpp
 
 SRCS			:=		main.cpp\
-						Contact.cpp\
-						PhoneBook.cpp
+						Weapon.cpp\
+						HumanA.cpp\
+						HumanB.cpp
 
 OBJ_DIR			:=		obj
 

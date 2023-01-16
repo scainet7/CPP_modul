@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		phonebook
+NAME			:=		horde_of_Zombies
 
 CC				:=		c++
 
@@ -19,13 +19,11 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	main.hpp\
-						Contact.hpp\
-						PhoneBook.hpp
+HEADERS			:=		Zombie.hpp
 
 SRCS			:=		main.cpp\
-						Contact.cpp\
-						PhoneBook.cpp
+						Zombie.cpp\
+						zombieHorde.cpp
 
 OBJ_DIR			:=		obj
 
