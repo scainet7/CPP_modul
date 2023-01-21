@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		phonebook
+NAME			:=		harl
 
 CC				:=		c++
 
@@ -19,13 +19,10 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	main.hpp\
-						Contact.hpp\
-						PhoneBook.hpp
+HEADERS			:=   	Harl.hpp\
 
 SRCS			:=		main.cpp\
-						Contact.cpp\
-						PhoneBook.cpp
+						Harl.cpp
 
 OBJ_DIR			:=		obj
 
