@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		harlFilter
+NAME			:=		fixed
 
 CC				:=		c++
 
@@ -19,10 +19,10 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	Harl.hpp\
+HEADERS			:=   	Fixed.hpp\
 
 SRCS			:=		main.cpp\
-						Harl.cpp
+						Fixed.cpp
 
 OBJ_DIR			:=		obj
 
