@@ -40,7 +40,7 @@ $(NAME)			: 		$(HEADERS) $(OBJ)
 
 $(OBJ_DIR)/%.o	:		%.cpp $(HEADERS)
 							@mkdir -p $(OBJ_DIR)
-							$(CC) $(FLAGS) -c $< -o $@
+							$(CC) $(CFLAGS) -c $< -o $@
 
 clean			:
 						$(RM) $(OBJ_DIR)
