@@ -38,6 +38,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	this->_health_points = other.getHealth_Points();
 	this->_energy_points = other.getEnergy_Points();
 	this->_attack_damage = other.getAtack_Damage();
+	this->_take_damage = other.getTake_Damage();
 	return (*this);
 }
 

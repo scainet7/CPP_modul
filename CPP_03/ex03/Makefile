@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		fixed
+NAME			:=		diamondtrap
 
 CC				:=		c++
 
@@ -19,10 +19,16 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	Fixed.hpp\
+HEADERS			:=   	ClapTrap.hpp\
+						ScavTrap.hpp\
+						FragTrap.hpp\
+						DiamondTrap.hpp
 
 SRCS			:=		main.cpp\
-						Fixed.cpp
+						ClapTrap.cpp\
+						ScavTrap.cpp\
+						FragTrap.cpp\
+						DiamondTrap.cpp
 
 OBJ_DIR			:=		obj
 
