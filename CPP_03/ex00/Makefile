@@ -19,7 +19,7 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	ClapTrap.hpp\
+HEADERS			:=   	ClapTrap.hpp
 
 SRCS			:=		main.cpp\
 						ClapTrap.cpp

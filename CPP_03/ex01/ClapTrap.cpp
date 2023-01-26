@@ -2,12 +2,12 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << MAG "Default constructor called!\n" END;
+	std::cout << MAG "ClapTrap - default constructor called!\n" END;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << MAG "Destructor called!\n" END;
+	std::cout << MAG "ClapTrap - destructor called!\n" END;
 }
 
 ClapTrap::ClapTrap(std:: string _person_name)
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(std:: string _person_name)
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 	this->_take_damage = 0;
-	std::cout << MAG "Constructor called!\n" END;
+	std::cout << MAG "ClapTrap - constructor called!\n" END;
 	getInfo();
 }
 
@@ -33,7 +33,7 @@ void ClapTrap::getInfo()
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ClapTrap - copy assignment operator called\n";
 	this->_person_name = other.getPerson_Name();
 	this->_health_points = other.getHealth_Points();
 	this->_energy_points = other.getEnergy_Points();
@@ -43,7 +43,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 
 ClapTrap::ClapTrap (const ClapTrap &other)
 {
-	std::cout << MAG "Coppy constructor called!\n" END;
+	std::cout << MAG "ClapTrap - coppy constructor called!\n" END;
 	*this = other;
 }
 
@@ -75,18 +75,18 @@ int ClapTrap::getTake_Damage() const
 void ClapTrap::attack(const std::string &target)
 {
 	if (this->_energy_points > 0 && this->_health_points > 0)
-	{
-		std::cout << BLU << this->getPerson_Name() << " attacks " << target << "\n" END;
-		this->_energy_points--;
-	}
+		{
+			std::cout << BLU << this->getPerson_Name() << " attacks " << target << "\n" END;
+			this->_energy_points--;
+		}
 	else if (this->_health_points < 1)
-	{
-		std::cout << RED << this->getPerson_Name() << " died!\n" END;
-	}
+		{
+			std::cout << RED << this->getPerson_Name() << " died!\n" END;
+		}
 	else if (this->_energy_points <= 0)
-	{
-		std::cout << RED << "The " << this->getPerson_Name() << " has no energy!\n\n" END;
-	}
+		{
+			std::cout << RED << "The " << this->getPerson_Name() << " has no energy!\n\n" END;
+		}
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -96,14 +96,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 		if (this->_health_points <= amount)
 			{
 				this->_health_points = 0;
-				
 				this->_take_damage += amount;
 				std::cout << BLU << this->getPerson_Name() << " took " << amount << " damage\n\n" END;
 			}
 		else
 			{
 				this->_health_points -= amount;
-				this->_energy_points--;
 				this->_take_damage += amount;
 				std::cout << BLU << this->getPerson_Name() << " took " << amount << " damage\n\n" END;
 			}
@@ -139,4 +137,25 @@ void ClapTrap::beRepaired(unsigned int amount)
 	{
 		std::cout << RED << "The " << this->getPerson_Name() << " full health points!\n\n" END;
 	}
+}
+
+
+void ClapTrap::setHealth_Points(int _health_points)
+{
+	this->_health_points = _health_points;
+}
+
+void ClapTrap::setEnergy_Points(int _energy_points)
+{
+	this->_energy_points = _energy_points;
+}
+
+void ClapTrap::setAtack_Damage(int _attack_damage)
+{
+	this->_attack_damage = _attack_damage;
+}
+
+void ClapTrap::setPerson_Name(std::string _person_name)
+{
+	this->_person_name = _person_name;
 }

@@ -9,7 +9,6 @@
 # define MAG "\033[35m"
 # define END "\033[0m"
 
-
 class ClapTrap
 {
 	private:
@@ -33,6 +32,10 @@ class ClapTrap
 		int getEnergy_Points() const;
 		int getAtack_Damage() const;
 		int getTake_Damage() const;
+		void setHealth_Points(int _health_points);
+		void setEnergy_Points(int _energy_points);
+		void setAtack_Damage(int _attack_damage);
+		void setPerson_Name(std::string _person_name);
 		void getInfo();
 };
 
