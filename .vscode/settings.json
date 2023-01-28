@@ -26,6 +26,12 @@
 		"system_error": "cpp",
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"array": "cpp",
+		"ctime": "cpp",
+		"iomanip": "cpp",
+		"sstream": "cpp",
+		"tuple": "cpp",
+		"utility": "cpp"
 	}
 }

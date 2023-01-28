@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME			:=		fixed
+NAME			:=		lol
 
 CC				:=		c++
 
@@ -19,10 +19,14 @@ CFLAGS			:=		-Wall -Wextra -Werror -std=c++98 -pedantic
 
 RM				:=		rm -rf
 
-HEADERS			:=   	Fixed.hpp\
+HEADERS			:=   	Animal.hpp\
+						Dog.hpp\
+						Cat.hpp
 
 SRCS			:=		main.cpp\
-						Fixed.cpp
+						Animal.cpp\
+						Dog.cpp\
+						Cat.cpp
 
 OBJ_DIR			:=		obj
 
